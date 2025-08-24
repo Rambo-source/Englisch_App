@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Line Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>📚 Green Line Trainings-App</h1>
+    <div id="menu">
+      <button onclick="showSection('conversation')">1️⃣ Conversation</button>
+      <button onclick="showSection('grammar')">2️⃣ Grammar</button>
+      <button onclick="showSection('vocabulary')">3️⃣ Vocabulary</button>
+      <button onclick="mixedMode()">4️⃣ Mixed Mode</button>
+      <button onclick="showSection('units')">5️⃣ Unit-Auswahl</button>
+    </div>
+
+    <!-- Conversation -->
+    <div class="section" id="conversation">
+      <h2>Conversation</h2>
+      <p>You’re in a café in London. Order a drink and a snack.</p>
+      <textarea id="convInput" placeholder="Type your answer..."></textarea>
+      <button onclick="checkConversation()">Check</button>
+      <p id="convFeedback"></p>
+      <button onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- Grammar -->
+    <div class="section" id="grammar">
+      <h2>Grammar</h2>
+      <p>Fill in: Yesterday, I ___ (go) to the cinema.</p>
+      <input id="gramInput" type="text" placeholder="Your answer">
+      <button onclick="checkGrammar()">Check</button>
+      <p id="gramFeedback"></p>
+      <button onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- Vocabulary -->
+    <div class="section" id="vocabulary">
+      <h2>Vocabulary</h2>
+      <p>What’s the English word for „Verabredung“?</p>
+      <input id="vocabInput" type="text" placeholder="Your answer">
+      <button onclick="checkVocabulary()">Check</button>
+      <p id="vocabFeedback"></p>
+      <button onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- Units -->
+    <div class="section" id="units">
+      <h2>Unit-Auswahl</h2>
+      <p>Wähle dein Buch:</p>
+      <button onclick="chooseBook('GL1')">Green Line 1</button>
+      <button onclick="chooseBook('GL2')">Green Line 2</button>
+      <button onclick="chooseBook('GL3')">Green Line 3</button>
+      <button onclick="chooseBook('GL4')">Green Line 4</button>
+      <button onclick="chooseBook('GL5')">Green Line 5</button>
+      <div id="unitList"></div>
+      <button onclick="goHome()">⬅ Back</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
